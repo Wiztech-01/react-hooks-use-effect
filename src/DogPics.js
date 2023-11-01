@@ -13,14 +13,14 @@ function DogPics() {
         console.log("setState");
         setImages(data.message);
       });
-  });
+  }, []);
 
   console.log("render");
 
   return (
     <div>
       {images.map((image) => (
-        <img src={image} key={image} />
+        <img src={image} key={image} height="200" width="200"/>
       ))}
     </div>
   );
